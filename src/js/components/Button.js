@@ -1,42 +1,33 @@
 import React from "react";
 
+import RevolverItem from "./RevolverItem";
+
 export default class Button extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.buttonClicked = this.buttonClicked.bind(this);
 		
+		this.state = {
+      		showComponent: false
+    	};
+		this.buttonPressed = this.buttonPressed.bind(this);
 	}
 
-	buttonClicked(event) {
-		//alert("Button clicked");
-		var revBtn = document.getElementById("revolverButtonBox");
-		//var numberOfItems = document.getElementById("btnRev").getAttribute("numberOfItems");
-		//alert(numberOfItems);
-
-		const stylesTrabant = {
-			position: 'absolute',
-			top: 20,
-			left: 20,
-		}
-
-		var top = 0;
-		var left = 0;
-
-		for(var i = 0; i < 10; i++) {
-			var btn = document.createElement('button');
-			btn.setAttribute("id", "revTrabantBtn" + i);
-			//btn.setAttribute("style", "position: absolute;top: 20px;left: "left );
-		  	var myText = document.createTextNode('Welt');
-	      	btn.appendChild(myText);
-	      	revBtn.appendChild(btn);
-	    }  			    
+	buttonPressed() {
+	    this.setState({
+	    	showComponent: true
+	    });
 	}
 
-	mouseLeaved (){
-		//alert("mouse leaved");
-	}
 
+
+	touchEnded(){
+		
+		this.setState({
+	    	showComponent: false
+	    });
+	    alert("in touch ended");
+	}
 	
 	render() {
 		const styles = {
@@ -47,8 +38,26 @@ export default class Button extends React.Component {
 		};
 
 		return (
-			<div id="revolverButtonBox" className="revBtnTwo">
-				<button id="btnRev" style={styles} onMouseOver={this.buttonClicked} onMouseLeave={this.mouseLeaved}>Hallo</button>
+			<div>
+				
+				<div id="revolverButtonBox" className="revBtnTwo">
+
+				{this.state.showComponent ? 
+					<RevolverItem /> : 
+					null
+				}
+				{this.state.showComponent ? 
+					<RevolverItem /> : 
+					null
+				}
+				{this.state.showComponent ? 
+					<RevolverItem /> : 
+					null
+				}
+					
+			
+				</div>
+				<button id="btnRev" style={styles} onTouchStart={this.buttonPressed} onTouchCancel={this.touchEnded} onTouchEnd={this.touchEnded}>Hallo</button>
 			</div>
 		);
 	}
