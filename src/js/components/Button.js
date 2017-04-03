@@ -19,10 +19,7 @@ export default class Button extends React.Component {
 	    });
 	}
 
-
-
 	touchEnded(){
-		
 		this.setState({
 	    	showComponent: false
 	    });
@@ -30,34 +27,36 @@ export default class Button extends React.Component {
 	}
 	
 	render() {
-		const styles = {
-		    color: 'red',
-		    position: 'absolute',
-		    top: 300,
-		    left: 200,
-		};
+		const revItem = {			
+			backgroundColor: '#EF5350',
+			color: 'white',
+			border: 'none',
+			margin: 5,
+		}
 
 		return (
-			<div>
+			<div id="revolverButtonBox">
 				
-				<div id="revolverButtonBox" className="revBtnTwo">
+				<div id="" class="container">
+					<button id="btnRev" style={revItem} onTouchStart={this.buttonPressed} onTouchCancel={this.touchEnded} onTouchEnd={this.touchEnded}>Hallo</button>
+				</div>
+
+				<div id="revolverItems" className="revBtnTwo">
 
 				{this.state.showComponent ? 
-					<RevolverItem /> : 
+					<RevolverItem styleProp={revItem} /> : 
 					null
 				}
 				{this.state.showComponent ? 
-					<RevolverItem /> : 
+					<RevolverItem styleProp={revItem} /> : 
 					null
 				}
 				{this.state.showComponent ? 
-					<RevolverItem /> : 
+					<RevolverItem styleProp={revItem} /> : 
 					null
 				}
-					
-			
 				</div>
-				<button id="btnRev" style={styles} onTouchStart={this.buttonPressed} onTouchCancel={this.touchEnded} onTouchEnd={this.touchEnded}>Hallo</button>
+
 			</div>
 		);
 	}

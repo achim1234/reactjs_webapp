@@ -5,9 +5,14 @@ export default class RevolverItem extends React.Component {
 		super(props);
 	}
 
+	onClickHandler(){
+		alert("RevolverItem clicked");
+	}
+
 	render() {
+		
 		return (
-			<button>Revolver Item</button>
+			<button style={this.props.styleProp} onClick={this.onClickHandler}>Revolver Item</button>
 		);
 	}
 }
