@@ -3,16 +3,19 @@ import React from "react";
 export default class RevolverItem extends React.Component {
 	constructor(props) {
 		super(props);
+
+		this.onClickHandler = this.onClickHandler.bind(this);
 	}
 
 	onClickHandler(){
-		alert("RevolverItem clicked");
+		var value = this.props.value;
+		alert(value + " clicked!");
 	}
 
 	render() {
 		
 		return (
-			<button style={this.props.styleProp} onClick={this.onClickHandler}>Revolver Item</button>
+			<button style={this.props.styleProp} onClick={this.onClickHandler}>{this.props.value}</button>
 		);
 	}
 }

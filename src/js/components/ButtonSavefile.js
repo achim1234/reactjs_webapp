@@ -11,16 +11,22 @@ export default class Button extends React.Component {
 		this.state = {
       		showComponent: false
     	};
-		this.toggleShowHide = this.toggleShowHide.bind(this);
+		this.buttonPressed = this.buttonPressed.bind(this);
 	}
 
+	buttonPressed() {
+	    this.setState({
+	    	showComponent: true
+	    });
+	}
 
-	toggleShowHide(){
-		var newState = this.state.showComponent == false ? true : false;
-		this.setState({showComponent: newState});
+	touchEnded(){
+		this.setState({
+	    	showComponent: false
+	    });
+	    alert("in touch ended");
 	}
 	
-
 	render() {
 		const revItem = {			
 			backgroundColor: ButtonStyles.colorButton,
@@ -33,8 +39,7 @@ export default class Button extends React.Component {
 		const mainCentered = {
 			display: 'flex',
 			alignItems: 'center',
-			justifyContent: 'center',
-			marginTop: 30
+			justifyContent: 'center'
 		};
 
 		return (
@@ -44,36 +49,36 @@ export default class Button extends React.Component {
 				<div id="revolverItems" className="revBtnTwo">
 
 				{this.state.showComponent ? 
-					<RevolverItem value="Antworten" styleProp={revItem} className="fixed-top" /> : 
+					<RevolverItem styleProp={revItem} className="fixed-top" /> : 
 					null
 				}
 				{this.state.showComponent ? 
-					<RevolverItem value="Archivieren" styleProp={revItem} /> : 
+					<RevolverItem styleProp={revItem} /> : 
 					null
 				}
 				{this.state.showComponent ? 
-					<RevolverItem value="Löschen" styleProp={revItem} className="fixed-bottom" /> : 
+					<RevolverItem styleProp={revItem} className="fixed-bottom" /> : 
 					null
 				}
 				</div>
 
 				
 				<div style={mainCentered}>
-					<button id="btnRev" style={revItem} onTouchStart={this.toggleShowHide}>E-Mail</button>
+					<button id="btnRev" style={revItem} onTouchStart={this.buttonPressed} onTouchCancel={this.touchEnded} onTouchEnd={this.touchEnded}>Hallo</button>
 				</div>
 
 				<div id="revolverItems2" className="revBtnTwo">
 
 				{this.state.showComponent ? 
-					<RevolverItem value="Spam" styleProp={revItem} className="fixed-top" /> : 
+					<RevolverItem styleProp={revItem} className="fixed-top" /> : 
 					null
 				}
 				{this.state.showComponent ? 
-					<RevolverItem value="Gelesen" styleProp={revItem} /> : 
+					<RevolverItem styleProp={revItem} /> : 
 					null
 				}
 				{this.state.showComponent ? 
-					<RevolverItem value="Ungelesen" styleProp={revItem} className="fixed-bottom" /> : 
+					<RevolverItem styleProp={revItem} className="fixed-bottom" /> : 
 					null
 				}
 				</div>
