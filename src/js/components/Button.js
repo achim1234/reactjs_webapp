@@ -27,21 +27,35 @@ export default class Button extends React.Component {
 			color: ButtonStyles.colorWhite,
 			border: 'none',
 			margin: 5,
-			marginTop: 30
+			marginTop: 0,
+			width: 100,
+			zIndex: 10000
 		};
 
 		const mainCentered = {
 			display: 'flex',
 			alignItems: 'center',
 			justifyContent: 'center',
-			marginTop: 30
+			marginTop: 0
 		};
 
+		const overlayMainCentered = {
+			display: 'flex',
+			alignItems: 'center',
+			justifyContent: 'center',
+			zIndex: 10000,
+			
+		};
+
+		const overlayMain = {
+			zIndex: 10000
+		}
+
 		return (
-			<div id="revolverButtonBox">
+			<div id="revolverButtonBox" style={overlayMain}>
 
 
-				<div id="revolverItems" className="revBtnTwo">
+				<div id="revolverItems" className="revBtnTwo" style={overlayMainCentered}>
 
 				{this.state.showComponent ? 
 					<RevolverItem value="Antworten" styleProp={revItem} className="fixed-top" /> : 
@@ -62,7 +76,7 @@ export default class Button extends React.Component {
 					<button id="btnRev" style={revItem} onTouchStart={this.toggleShowHide}>E-Mail</button>
 				</div>
 
-				<div id="revolverItems2" className="revBtnTwo">
+				<div id="revolverItems2" className="revBtnTwo" style={overlayMainCentered}>
 
 				{this.state.showComponent ? 
 					<RevolverItem value="Spam" styleProp={revItem} className="fixed-top" /> : 

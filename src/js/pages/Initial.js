@@ -10,6 +10,7 @@ export default class Initial extends React.Component {
         <h2>Genres</h2>
         <br />
         <Button />
+        <p>jddijdiajdiasjdjasidjasijdiasjdijasidj</p>
       </div>
     );
   }
