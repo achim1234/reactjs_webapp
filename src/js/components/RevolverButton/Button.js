@@ -73,7 +73,7 @@ export default class Button extends React.Component {
 
 				
 				<div style={mainCentered}>
-					<button id="btnRev" style={revItem} onTouchStart={this.toggleShowHide}>E-Mail</button>
+					<button id="btnRev" style={revItem} onClick={this.toggleShowHide} onTouchStart={this.toggleShowHide}>E-Mail</button>
 				</div>
 
 				<div id="revolverItems2" className="revBtnTwo" style={overlayMainCentered}>

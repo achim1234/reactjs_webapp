@@ -1,6 +1,7 @@
 import React from "react";
 
-import Button from "../components/Button"
+import Button from "../components/RevolverButton/Button"
+import CircleButton from "../components/CircleRevolverButton/Button"
 
 export default class Initial extends React.Component {
   render() {
@@ -11,6 +12,8 @@ export default class Initial extends React.Component {
         <br />
         <Button />
         <p>jddijdiajdiasjdjasidjasijdiasjdijasidj</p>
+        <br />
+        <CircleButton />
       </div>
     );
   }

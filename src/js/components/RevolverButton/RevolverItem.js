@@ -10,6 +10,7 @@ export default class RevolverItem extends React.Component {
 	onClickHandler(){
 		var value = this.props.value;
 		alert(value + " clicked!");
+		console.log(value + " clicked!");
 	}
 
 	render() {
