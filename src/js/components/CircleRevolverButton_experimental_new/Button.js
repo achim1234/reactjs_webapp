@@ -23,9 +23,9 @@ export default class Button extends React.Component {
 
 	onClickHandler(){
 		
-		
+		//return this.setState({showComponent: true});
 
-		var x, y;
+		/*var x, y;
 		var num = 7;
 		var radius = 100;
 		var offsetX = 300;
@@ -36,6 +36,7 @@ export default class Button extends React.Component {
      		x = radius * Math.cos(n / num * 2 * Math.PI);
 		    y = radius * Math.sin(n / num * 2 * Math.PI);
 		    var div = document.createElement("div");
+		    //var div = document.getElementById("revolvers");
 		  	div.style.left = (x + offsetX) + "px";
 		    div.style.top = (y + offsetY) + "px";
 		    div.style.position = "absolute";
@@ -46,7 +47,7 @@ export default class Button extends React.Component {
 		    //div.style.zIndex = "10000";
 		    document.body.appendChild(div);
 		}
-		
+		*/
 	}
 	
 
@@ -54,42 +55,49 @@ export default class Button extends React.Component {
 		const mainButton = {			
 			backgroundColor: ButtonStyles.colorButton,
 			color: ButtonStyles.colorWhite,
-			border: 'none',
-			margin: 5,
+			margin: 0,
 			marginTop: 0,
 			width: 50,
 			height: 50,
-			borderRadius: 25
+			borderRadius: 25,
+			border: 'none',
+			position: 'absolute',
+			top: 85,
+			left: 85
 		};
 
 		const mainCentered = {
 			display: 'flex',
+			position: 'relative',
 			alignItems: 'center',
 			justifyContent: 'center',
 			marginTop: 0
 		};
 
-		const overlayMainCentered = {
-			display: 'flex',
-			alignItems: 'center',
-			justifyContent: 'center',
-			zIndex: 10000
-		};
+		
 
-		const overlayMain = {
-			zIndex: 10000
-		}
+
 
 
 
 		return (
-			<div id="revolverButtonBox" style={overlayMain}>
+			<div id="revolverButtonBox" >
 
-				<div id="revolverItems" className="overlay" style={overlayMainCentered}>
+				<div id="revolverItems" >
 					<div style={mainCentered}>
-						<button id="btnRev" style={mainButton} onClick={this.onClickHandler} onTouchMove={this.toggleShowHide}>Num</button>
+						<button id="btnRev" style={mainButton} onClick={this.toggleShowHide} onTouchMove={this.toggleShowHide}>Num</button>
+						{this.state.showComponent && <RevolverItem value="1" maxItems="8" />}
+						{this.state.showComponent && <RevolverItem value="2" maxItems="8" />}
+						{this.state.showComponent && <RevolverItem value="3" maxItems="8" />}
+						{this.state.showComponent && <RevolverItem value="4" maxItems="8" />}
+						{this.state.showComponent && <RevolverItem value="5" maxItems="8" />}
+						{this.state.showComponent && <RevolverItem value="6" maxItems="8" />}
+						{this.state.showComponent && <RevolverItem value="7" maxItems="8" />}
+						{this.state.showComponent && <RevolverItem value="8" maxItems="8" />}
 					</div>
+
 				</div>
+				<div id="revolvers"></div>
 			</div>
 		);
 	}

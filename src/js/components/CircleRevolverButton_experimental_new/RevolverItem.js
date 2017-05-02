@@ -13,32 +13,46 @@ export default class RevolverItem extends React.Component {
 		alert(value + " clicked!");
 		console.log(value + " clicked!");
 
-		var x, y;
-		var num = 6;
-		var radius = 100;
-		var offsetX = 100;
-		var offsetY = 100;
 
-		for (var n = 0; n < num; n++) {
-     		x = radius * Math.cos(n / num * 2 * Math.PI);
-		     y = radius * Math.sin(n / num * 2 * Math.PI);
-		     var div = document.createElement("button");
-		     div.className = className;
-		     div.style.left = (x + offsetX) + "px";
-		     div.style.top = (y + offsetY) + "px";
-		     document.body.appendChild(div);
-		}
+
+		    
+	
 		
 	}
 
 	render() {
 
+		var x, y;
+		var currentItem = this.props.value -1;
+		var num = this.props.maxItems;
+		var radius = 50;
+		var offsetX = 100;
+		var offsetY = 100;
 
+		
+     	x = (radius * Math.cos(currentItem / num * 2 * Math.PI)) + offsetX;
+		y = (radius * Math.sin(currentItem / num * 2 * Math.PI)) + offsetY;
+		     
+		     
+		console.log("x: " + x);
+		console.log("y: " + y);
+
+		const style = {
+			backgroundColor: ButtonStyles.colorButton,
+			color: ButtonStyles.colorWhite,
+			position: 'absolute',
+			left: x,
+			top: y,
+			width: 24,
+			height: 24,
+			borderRadius: 12,
+			border: 'none'
+		};
 
 
 		
 		return (
-				<button style={this.props.styleProp} onClick={this.onClickHandler} onTouchEnd={this.onClickHandler}>{this.props.value}</button>
+				<button style={style} onClick={this.onClickHandler} onTouchEnd={this.onClickHandler}>{this.props.value}</button>
 		
 		);
 	}
