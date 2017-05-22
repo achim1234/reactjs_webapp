@@ -41,6 +41,15 @@ export default class NavigationBar extends React.Component {
             <li>
               <Link to="movies" onClick={this.toggleCollapse.bind(this)}>New Movies</Link>
             </li>
+            <li>
+              <Link to="formular" onClick={this.toggleCollapse.bind(this)}>Formular</Link>
+            </li>
+            <li>
+              <Link to="email" onClick={this.toggleCollapse.bind(this)}>E-Mail</Link>
+            </li>
+            <li>
+              <Link to="menu" onClick={this.toggleCollapse.bind(this)}>Menu</Link>
+            </li>
           </ul>
         </div>
       </nav>

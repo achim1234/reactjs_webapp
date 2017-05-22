@@ -1,0 +1,102 @@
+Erstellen von UI-Elementen mittels ReactJS:
+
+
+	Abkürzungsverzeichnis:
+
+		UI - User Interface (Benutzerschnittstelle)
+		HTML - Hyper Text Markup Language
+		CSS - Cascading Style Sheets
+
+
+
+
+
+
+	Begriffserklärungen:
+
+		Node.js: lts version installieren
+		NPM:
+		ReactJS:
+		 Bereitstellung von Facebook.
+		 konzepte (virtual dom, unidirektionaler datenfluss)
+		 Bei ReactJS handelt es sich um eine JavaScript-Bibliothek die es ermöglicht UI-Komponenten mittels HTML zu erzeugen. ReacrJS kommt typischerweise bei der Erstellung von Single-Page-Webanwendungen zum Einsatz.
+		(https://de.wikipedia.org/wiki/React_(JavaScript) 08.05.2017 11:10)
+
+		UI:
+
+		HTML:
+		JavaScript:
+		EcmaScript6: ???
+
+		CSS:
+		GIT:
+		
+
+
+
+
+
+	Grundlagen:
+		Grundlage dieses Projekts bildet der react-seed von Matijas Milos (Benutzername Github: MatMil), der als Gitub Repository unter folgendem Link bereitgestellt wird:
+			https://github.com/MatiMil/react-seed
+
+
+		Um mit dem react-seed zu arbeiten, kann dieser direkt von Github gedownloadet werden oder auch mittels GIT heruntergeladen werden. Dazu wird in der Windows/Linux/MAC-Konsole folgender Befehl eingegeben.
+			git clone https://github.com/MatiMil/react-seed.git
+
+
+		Zur Datensicherung empfiehlt es sich, für das eigene Projekt ebenfalls auf Github ein Repository anzulegen. Unter folgendem Link gibt es eine Schritt für Schritt Anleitung, wie ein neues Repository angelegt wird:
+			https://help.github.com/articles/create-a-repo/ (08.05.2017 11:15)
+
+		Der react-seed kann als Grundgerüst für beliebige ReactJS Projekte genutzt werden. Das Grundgerüst gibt vor, wie die selbst erstellten Dateien sinnvoll gegliedert werden können. Dies ist nicht zwingend notwendig, aber es bietet eine Struktur die alle erstellten Projekte gleich gliedert. Somit wird die Wartbarkeit und Übersichtlichkeit der Projektstruktur gewährleistet. Der react-seed besitzt eine Navigationsleite, die auch über ein Hamburger Menü verfügt. 
+
+
+	Einrichten der Projektumgebung:
+		-Installation git (verweis auf tutorial):
+			Schritt 1: GIT kann unter folgendem Link heruntergeladen werden:
+						https://git-for-windows.github.io/
+
+			Schritt 2: Auf folgender Webseite werden die Grundlegenden Befehle, um GIT zu benutzen erläutert:
+						https://rogerdudler.github.io/git-guide/index.de.html
+
+					   Dieser kleine Einblick ist für dieses Projekt vollkommen ausreichend.	
+
+
+
+		-installation node.js lts:
+			Schritt 1: node.js kann auf folgender Seite heruntergeladen werden:		
+						https://nodejs.org/en/
+						Es empfiehlt sich die v6.10.3 LTS Version herunterzuladen und zu installieren. Bei der LTS Version handelt es sich um die Long Term Support Version, die über eine längere Zeit unterstüzt wird. (Wielange???????) Wenn immer die neuste Version installiert wird, in der neue Features hinzugekommen sind, kann es vorkommen, das bereits erstellter Code nicht mehr funktioniert. Deshalb sollte die Version während der Entwicklung nicht geändert werden. 
+
+
+
+		-npm -i, webpach usw. Anweisungen MatiMil
+		-im Homenetz verfügbar machen, damit mit smartphone darauf zugegriffen werden kann
+		-starten des Projektes
+		-google device debug
+
+
+	Dokumentation und Tutorials zum Erlernen der Grundlagen:
+		-https://facebook.github.io/react/
+		-Interaktives Tutorial auf Codecademy
+
+
+	Erzeugen einer ersten React Komponente:
+		-erklären des aufbaus einer klasse
+		-importe
+		-render() Funktion
+		Grundkonzepte:
+		-status 
+		- {this.props.attribut}
+		-https://facebook.github.io/react/docs/hello-world.html
+
+
+	RevolverButton:
+		-Warum, Weshalb???
+		-Erste Überlegungen
+		-konkrete Umsetzung
+
+
+	User Tests (Thinking Aloud Test):
+
+
