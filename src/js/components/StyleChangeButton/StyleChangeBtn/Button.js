@@ -17,7 +17,7 @@ export default class Button extends React.Component {
 
 	//wird aufgerufen, wenn RevolverItem angecklickt wurde. Werte werden an die Funktion übergeben.
 	toggleShowHide(value, htmlElement){
-		alert(value);
+		//alert(value + ", " + htmlElement);
 		var newState = this.state.showComponent == false ? true : false;
 		this.setState({showComponent: newState});
 
