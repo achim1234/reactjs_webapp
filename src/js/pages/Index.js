@@ -1,6 +1,7 @@
 import React from "react";
 
 import StyleRevBtn from "../components/StyleChangeButton/StyleChangeBtn/Button";
+import StyleRevBtnSchleife from "../components/StyleChangeButton_mit_Schleife/StyleChangeBtn/Button";
 
 export default class IndexPage extends React.Component {
   render() {
@@ -16,7 +17,7 @@ export default class IndexPage extends React.Component {
 		<br /><br /><br /><br />
 		<StyleRevBtn htmlElement="h1" btnName="h1-Color" />
 		<br /><br /><br /><br />
-		<StyleRevBtn />
+		<StyleRevBtnSchleife htmlElement="nav" btnName="nav color" maxItems="6" values={['#EF9A9A', '#E91E63', '#4527A0', '#006064', '#03A9F4', '#00C853']} />
       </div>
     );
   }
