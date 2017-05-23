@@ -4,19 +4,9 @@ import ButtonStyles from "./ButtonStyles";
 export default class RevolverItem extends React.Component {
 	constructor(props) {
 		super(props);
-
-		this.onClickHandler = this.onClickHandler.bind(this);
-	}
-
-	onClickHandler(){
-		var value = this.props.value;
-		
-		var background = document.getElementById('app');
-		background.style.backgroundColor = value;
 	}
 
 	render() {
-
 		var x, y;
 		var currentItem = this.props.currentItem -1;
 
@@ -48,9 +38,12 @@ export default class RevolverItem extends React.Component {
 			border: 'none'
 		};
 
+
+		var toggleShowHide = this.props.toggleShowHide;
+
 		return (
-				<button style={style} onClick={this.onClickHandler} onTouchEnd={this.onClickHandler}></button>
+				<button style={style} onClick={() => toggleShowHide(this.props.value, this.props.htmlElement)} onTouchCancel={() => toggleShowHide(this.props.value, this.props.htmlElement)}></button>
 		
 		);
 	}
-}
+} 
